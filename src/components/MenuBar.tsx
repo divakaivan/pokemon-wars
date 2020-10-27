@@ -23,6 +23,13 @@ const MenuBar = () => {
                     to="/"
                 />
                 <Menu.Item
+                    name='battle pokemons'
+                    active={activeItem === 'battle'}
+                    onClick={() => setActiveItem('battle')}
+                    as={Link}
+                    to="/battle-pokemons"
+                />
+                <Menu.Item
                     name='profile'
                     active={activeItem === 'profile'}
                     onClick={() => setActiveItem('profile')}
