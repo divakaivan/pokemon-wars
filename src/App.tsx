@@ -8,6 +8,7 @@ import { ReactQueryDevtools } from 'react-query-devtools'
 import Profile from "./pages/Profile"
 import Home from "./pages/Home";
 import PokemonSearch from "./pages/PokemonSearch";
+import Pokemon from "./pages/Pokemon";
 
 function App() {
     const {isLoading} = useAuth0();
@@ -28,7 +29,8 @@ function App() {
             <MenuBar/>
             <Route path="/" exact component={Home}/>
             <Route path="/profile" component={Profile}/>
-            <Route path="/battle-pokemons" component={PokemonSearch}/>
+            <Route path="/battle-pokemons" exact component={PokemonSearch}/>
+            <Route path="/battle-pokemons/:pokemonName" component={Pokemon} />
             <ReactQueryDevtools/>
         </Container>
     );

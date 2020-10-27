@@ -46,7 +46,7 @@ const PokemonSearch = () => {
         <>
             <Card.Group centered>
                 {data && data.map((pokemon: any) => (
-                    <PokemonCard pokemon={pokemon}/>
+                    <PokemonCard key={pokemon.number} pokemon={pokemon}/>
                 ))}
             </Card.Group>
         </>
