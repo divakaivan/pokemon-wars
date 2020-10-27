@@ -7,7 +7,7 @@ type PokemonProps = {
         number: number,
         image: string,
         name: string,
-        types: Array<string>
+        types: string[]
     }
 }
 
