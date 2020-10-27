@@ -5,16 +5,21 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Auth0ProviderWithHistory from "./auth/auth0-provider-with-history";
 import "semantic-ui-css/semantic.min.css";
+import {QueryCache, ReactQueryCacheProvider} from "react-query";
 
+const queryCache = new QueryCache();
 
 ReactDOM.render(
-    <Router>
-        <Auth0ProviderWithHistory>
-            <App/>
-        </Auth0ProviderWithHistory>
-    </Router>,
-  document.getElementById('root')
-);
+    <ReactQueryCacheProvider queryCache={queryCache}>
+        <Router>
+            <Auth0ProviderWithHistory>
+                <App/>
+            </Auth0ProviderWithHistory>
+        </Router>,
+    </ReactQueryCacheProvider>,
+document.getElementById('root')
+)
+;
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
