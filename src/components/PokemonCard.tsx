@@ -19,7 +19,6 @@ const PokemonCard = ({pokemon}: PokemonProps) => {
                 <Card.Header>{pokemon.name}</Card.Header>
                 <Card.Meta>{pokemon.number}</Card.Meta>
                 <Card.Description>
-                    {/*TODO: add images for pokemon type*/}
                     <PokemonTypeIcon types={pokemon.types}/>
                 </Card.Description>
             </Card.Content>
